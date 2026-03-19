@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 function MyComponent() {
-  const [cars, setCar] = useState([]);
+  const [cars, setCar] = useState([
+    { year: 2025, make: "Toyota", model: "Corolla" },
+  ]);
   const [carYear, setCarYear] = useState(new Date().getFullYear());
   const [carModel, setCarModel] = useState("");
   const [carMake, setCarMake] = useState("");
