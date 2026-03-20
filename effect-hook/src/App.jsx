@@ -1,6 +1,6 @@
-import MyComponent from "./myComponent";
+import MyComponent from "./myComponent.jsx";
 
-// useEffect()
+// useEffect() // side code 
 // React Hook that tells React to DO THIS CODE WHEN:
 // (pick one)
 // This component re-renders
@@ -8,6 +8,10 @@ import MyComponent from "./myComponent";
 // The state of a value changes
 
 // useEffect(function, [dependencies])
+
+//useEffect(() => {})              // Runs after every re-renders
+//useEffect(() => {},[])           // Runs only on mount
+//useEffect(() => {},[value])      // Runs on mount + when the value changes
 
 // USES
 // #1 Event Listeners
