@@ -21,30 +21,59 @@ import { useState, useEffect } from "react";
 
 // export default MyComponent;
 
-function Demo() {
+// function Demo() {
+//   const [count, setCount] = useState(0);
+//   const [name, setName] = useState("Arham");
+//   useEffect(() => {
+//     console.log("Runs every time");
+//   });
+
+//   useEffect(() => {
+//     console.log("Count Effect");
+//   }, [count]);
+
+//   useEffect(() => {
+//     console.log("Name Effect");
+//   }, [name]);
+
+//   return (
+//     <>
+//       <p>{count}</p>
+//       <button onClick={() => setCount(count + 1)}>Add</button>
+
+//       <p>{name}</p>
+//       <button onClick={() => setName("Ali")}>Chnage</button>
+//     </>
+//   );
+// }
+
+// export default Demo;
+
+function MyComponent() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Arham");
-  useEffect(() => {
-    console.log("Runs every time");
-  });
-
-  useEffect(() => {
-    console.log("Count Effect");
-  }, [count]);
-
-  useEffect(() => {
-    console.log("Name Effect");
-  }, [name]);
 
   return (
     <>
-      <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Add</button>
-
-      <p>{name}</p>
-      <button onClick={() => setName("Ali")}>Chnage</button>
+      <button
+        onClick={() => setCount(0)}
+        style={{ color: count === 0 ? "red" : "black" }}
+      >
+        Muhammad
+      </button>
+      <button
+        onClick={() => setCount(1)}
+        style={{ color: count === 1 ? "red" : "black" }}
+      >
+        Arham
+      </button>
+      <button
+        onClick={() => setCount(2)}
+        style={{ color: count === 2 ? "red" : "black" }}
+      >
+        Safa
+      </button>
     </>
   );
 }
 
-export default Demo;
+export default MyComponent;

@@ -23,8 +23,8 @@ import Demo from "./myComponent.jsx";
 function App() {
   return (
     <>
-      <Demo />
-      {/* <MyComponent /> */}
+      {/* <Demo /> */}
+      <MyComponent />
     </>
   );
 }
