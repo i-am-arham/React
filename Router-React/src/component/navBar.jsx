@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navBar.css";
 function Navbar() {
   return (
@@ -6,13 +6,34 @@ function Navbar() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-orange-700" : "text-gray-700"
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-orange-700" : "text-gray-700"
+              }
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive ? "text-orange-700" : "text-gray-700"
+              }
+            >
+              Dashboard
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -20,3 +41,4 @@ function Navbar() {
   );
 }
 export default Navbar;
+
